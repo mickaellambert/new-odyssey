@@ -1,3 +1,6 @@
-body {
-    color: #f76c6c;
+:root {
+    --main-color: #F5F5F5;
+    --main-color-lighter: #FFFFFF;
+    --secondary-color: #121B26;
+    --secondary-color-lighter: #39424E;
 }
