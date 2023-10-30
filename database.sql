@@ -17,47 +17,27 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `simple-mvc`
+-- Base de données :  `new_odyssey`
 --
 
 -- --------------------------------------------------------
 
---
--- Structure de la table `item`
---
+CREATE TABLE student
+(
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  firstname VARCHAR(150) NOT NULL,
+  lastname VARCHAR(200) NOT NULL,
+  phone CHAR(10), 
+  birthday DATE NOT NULL,
+  city VARCHAR(150),
+  picture VARCHAR(250),
+  crew_id INT
+);
 
-CREATE TABLE `item` (
-  `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `item`
---
-
-INSERT INTO `item` (`id`, `title`) VALUES
-(1, 'Stuff'),
-(2, 'Doodads');
-
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `item`
---
-ALTER TABLE `item`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `item`
---
-ALTER TABLE `item`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+CREATE TABLE crew
+(
+  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  label VARCHAR(150) NOT NULL,
+  language VARCHAR(50) NOT NULL,
+  created_at DATETIME NOT NULL
+);
