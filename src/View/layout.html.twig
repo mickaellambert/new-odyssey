@@ -15,7 +15,10 @@
 </head>
 
 <body>
+    <div class="d-flex">
+    {% include 'nav.html.twig' %}
     {% block content %}{% endblock %}
+    </div>
     <script src="/assets/js/bootstrap.js"></script>
     {% block javascript %}{% endblock %}
 </body>
